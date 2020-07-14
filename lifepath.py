@@ -30,11 +30,10 @@ final = []
 month = int(input("Enter the number of the month of your birth \n"))
 day = int(input("Enter the number for the day of your birth \n"))
 year = int(input("Enter the full year of your birth \n"))
-print("So your full birth date is " + str(month) + "/" + str(day) + "/" + str(year) + "?")
+# ignore this for now print("So your full birth date is " + str(month) + "/" + str(day) + "/" + str(year) + "?")
 
 
 # take user's input for month and reduce down to single digit unless it's 11 and print the result
-# WORKING
 if month == 11:
     print("11 is correct here.")
     prefinal.append(month)
@@ -45,7 +44,6 @@ else:
 
 
 # reduce the user's input for the day of their birth down to a single digit unless it's 11 or 22 and print the result
-# WORKING
 if day == 11 or day == 22:
     print("result of day is " + str(day) + ".")
     prefinal.append(day)
@@ -56,9 +54,9 @@ else:
 
 
 # reduce the user's input for the year of their birth until it's a single digit unless it's 11 or 22
-yearsum = sum(int(digit) for digit in str(year)) # this works
+yearsum = sum(int(digit) for digit in str(year))
 
-if yearsum == 11 or yearsum == 22: # this WORKS, try 1975 it = 22
+if yearsum == 11 or yearsum == 22: # try 1975 = 22
     print("your year reduced once down to magic number " + str(yearsum))
     prefinal.append(yearsum)
 elif yearsum > 10:
