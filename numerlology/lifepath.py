@@ -1,5 +1,6 @@
-# life path number assigns a number to the month you were born in and then adds the numbers from the rest
-# and reduces them down to a single digit (unless it's 11 or 22)
+# the life path is derived by finding the sum of the month, day and year of birth and reducing that sum to a
+# single digit or master number (11, 22)
+
 # MONTH may/5 = 5
 
 # DAY = 29
@@ -16,6 +17,7 @@
 # my life path number = 8
 
 import numpy as np
+import pytest
 from functools import reduce
 
 

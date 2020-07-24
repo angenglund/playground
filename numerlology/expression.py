@@ -1,9 +1,15 @@
+# the expression is derived by finding the sum of the  number of values of all the letters in each name, reducing this
+# sum to a single digit or master number, then adding the sums of all the names together and reducing that total to a
+# single digit or master number (11, 22)
+
+
+
 def special_sum(number):
     # This is a hack, because if it's a string we can split up the digits
     number_as_string = str(number)
 
     # If we only have a single digit, we don't need to continue, we've hit gold
-    if len(number_as_string) == 1:
+    if len(number_as_string) == 1 or len(number_as_string) == 11 or len(number_as_string) == 22:
         return number_as_string
 
     # See above note about the hack, 55 -> "55" -> ["5", "5"]
